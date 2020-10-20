@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.atmecs.hibernate_demo.crud_op.DisplayRecord">
+      <class name="com.atmecs.hibernate_db_demo.test.EmployeeDetails">
         <methods>
-          <include name="displayRecord"/>
+          <include name="employee_details"/>
         </methods>
-      </class> <!-- com.atmecs.hibernate_demo.crud_op.DisplayRecord -->
+      </class> <!-- com.atmecs.hibernate_db_demo.test.EmployeeDetails -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
