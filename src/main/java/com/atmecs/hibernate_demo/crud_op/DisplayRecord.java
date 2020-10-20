@@ -19,9 +19,16 @@ public class DisplayRecord
 			session.beginTransaction();
 			
 			int id = 1181;
-			Employee emp = session.get(Employee.class,id);
+			Employee emp = session.get(Employee.class, id);
 			
-			System.out.println("Employee Details::"+ emp);
+			System.out.println("Employee Id::"+emp.getEmp_id());
+			System.out.println("Employee Name::"+emp.getEmp_name());
+			System.out.println("Employee Project::"+emp.getP_name());
+			System.out.println("Employee E_mail::"+emp.getE_mail());
+			System.out.println("Employee Phone::"+emp.getPhone());
+			System.out.println("Employee Salary::"+emp.getSalary());
+			
+			//System.out.println("Employee Details::"+ emp);
 			
 			session.getTransaction().commit();
 			
