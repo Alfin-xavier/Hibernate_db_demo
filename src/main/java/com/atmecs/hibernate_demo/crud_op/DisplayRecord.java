@@ -20,10 +20,10 @@ public class DisplayRecord
 		{
 			session.beginTransaction();
 			
-			int id = 1;
+			int id = 1181;
 			Employee emp = session.get(Employee.class,id);
 			
-			System.out.println("Employee Details::"+emp);
+			System.out.println("Employee Details::"+ emp);
 			
 			session.getTransaction().commit();
 			
