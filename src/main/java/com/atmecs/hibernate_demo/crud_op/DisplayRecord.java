@@ -9,33 +9,28 @@ import com.atmecs.hibernate_demo.entity.Employee;
 
 public class DisplayRecord 
 {
-	public void displayRecord()
+	public void displayRecord() 
 	{
-		SessionFactory factory = (SessionFactory) new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Employee.class).buildSessionFactory();
+		SessionFactory factory = (SessionFactory) new Configuration().configure("hibernate.cfg.xml")
+				.addAnnotatedClass(Employee.class).buildSessionFactory();
 		Session session = factory.getCurrentSession();
-		
-		try
+
+		try 
 		{
 			session.beginTransaction();
-			
+
 			int id = 1181;
 			Employee emp = session.get(Employee.class, id);
-			
-			System.out.println("Employee Id::"+emp.getEmp_id());
-			System.out.println("Employee Name::"+emp.getEmp_name());
-			System.out.println("Employee Project::"+emp.getP_name());
-			System.out.println("Employee E_mail::"+emp.getE_mail());
-			System.out.println("Employee Phone::"+emp.getPhone());
-			System.out.println("Employee Salary::"+emp.getSalary());
-			
-			//System.out.println("Employee Details::"+ emp);
-			
+
+			System.out.println("Employee Id: " + emp.getEmp_id() + "\n" + "Employee Name: " + emp.getEmp_name() + "\n"
+					+ "Employee Project: " + emp.getP_name() + "\n" + "Employee E_mail: " + emp.getE_mail() + "\n"
+					+ "Employee Phone: " + emp.getPhone() + "\n" + "Employee Salary: " + emp.getSalary());
+
 			session.getTransaction().commit();
-			
-		}
-		catch(SessionException e){
-		}
-		finally
+
+		} catch (SessionException e) {
+		} 
+		finally 
 		{
 			session.close();
 			factory.close();
