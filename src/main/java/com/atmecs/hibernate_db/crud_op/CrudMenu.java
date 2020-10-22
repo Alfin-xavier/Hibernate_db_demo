@@ -1,4 +1,4 @@
-package com.atmecs.hibernate_demo.employee_crud_op;
+package com.atmecs.hibernate_db.crud_op;
 
 import java.util.Scanner;
 

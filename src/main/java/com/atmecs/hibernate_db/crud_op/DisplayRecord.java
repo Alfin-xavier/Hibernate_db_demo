@@ -1,11 +1,11 @@
-package com.atmecs.hibernate_demo.employee_crud_op;
+package com.atmecs.hibernate_db.crud_op;
 
 import org.hibernate.Session;
 import org.hibernate.SessionException;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.atmecs.hibernate_demo.employee_entity.Employee;
+import com.atmecs.hibernate_db.entity.Employee;
 
 public class DisplayRecord 
 {
