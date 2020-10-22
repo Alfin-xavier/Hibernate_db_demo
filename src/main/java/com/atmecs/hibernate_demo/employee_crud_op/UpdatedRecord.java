@@ -1,11 +1,11 @@
-package com.atmecs.hibernate_demo.crud_op;
+package com.atmecs.hibernate_demo.employee_crud_op;
 
 import org.hibernate.Session;
 import org.hibernate.SessionException;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.atmecs.hibernate_demo.entity.Employee;
+import com.atmecs.hibernate_demo.employee_entity.Employee;
 
 public class UpdatedRecord 
 {
@@ -21,7 +21,7 @@ public class UpdatedRecord
 			{
 				session.beginTransaction();
 				
-				int id = 1;
+				int id = 2;
 				Employee emp = session.get(Employee.class, id);
 				
 				System.out.println("** Before Update **");

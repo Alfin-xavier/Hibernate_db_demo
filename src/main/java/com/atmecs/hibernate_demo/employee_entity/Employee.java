@@ -1,4 +1,4 @@
-package com.atmecs.hibernate_demo.entity;
+package com.atmecs.hibernate_demo.employee_entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

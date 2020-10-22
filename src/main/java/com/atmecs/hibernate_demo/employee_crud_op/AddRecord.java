@@ -1,16 +1,15 @@
-package com.atmecs.hibernate_demo.crud_op;
+package com.atmecs.hibernate_demo.employee_crud_op;
 
 import org.hibernate.Session;
 import org.hibernate.SessionException;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.atmecs.hibernate_demo.entity.Employee;
+import com.atmecs.hibernate_demo.employee_entity.Employee;
 
-public class DeleteRecord 
+public class AddRecord 
 {
-
-	public void deleteRecord() 
+	public void addEmployee()
 	{
 		SessionFactory factory = (SessionFactory) new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Employee.class).buildSessionFactory();
 		Session session = factory.getCurrentSession();
@@ -19,20 +18,13 @@ public class DeleteRecord
 		{
 			session.beginTransaction();
 			
-			int id = 1181;
-			Employee emp = session.get(Employee.class, id);
+			//Employee emp = new Employee("Alfin", "alfin@gmail.com", "8675542084", "35000",1111);
 			
-			  session.delete(emp);
-			  
-			  System.out.println("Record Deleted Successfully!!\n");
-			 
-			  session.getTransaction().commit();
+			Employee emp = new Employee("Shane", "Shane@gmail.com", "8675542084", "35000",1111);
+			session.save(emp);
+			System.out.println("Record Added Successfully!!");
 			
-			  System.out.println("** Employee Details **");
-
-				System.out.println(emp);
-			 
-			 
+			session.getTransaction().commit();
 		}
 		catch(SessionException e){
 		}
