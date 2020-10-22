@@ -19,11 +19,11 @@ public class DisplayRecord
 		{
 			session.beginTransaction();
 
-			int id = 1181;
+			int id = 1;
 			Employee emp = session.get(Employee.class, id);
 
 			System.out.println("Employee Id: " + emp.getEmp_id() + "\n" + "Employee Name: " + emp.getEmp_name() + "\n"
-					+ "Employee Project: " + emp.getP_name() + "\n" + "Employee E_mail: " + emp.getE_mail() + "\n"
+					+ "Employee Project: " + emp.getP_id() + "\n" + "Employee E_mail: " + emp.getE_mail() + "\n"
 					+ "Employee Phone: " + emp.getPhone() + "\n" + "Employee Salary: " + emp.getSalary());
 
 			session.getTransaction().commit();

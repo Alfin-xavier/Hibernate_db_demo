@@ -18,9 +18,11 @@ public class AddRecord
 		{
 			session.beginTransaction();
 			
-			Employee emp = new Employee(1184,"abc", "abc@gmail.com", "8675544384", "35000","SDET");
+			//Employee emp = new Employee("Alfin", "alfin@gmail.com", "8675542084", "35000",1111);
 			
+			Employee emp = new Employee("Shane", "Shane@gmail.com", "8675542084", "35000",1111);
 			session.save(emp);
+			System.out.println("Record Added Successfully!!");
 			
 			session.getTransaction().commit();
 		}

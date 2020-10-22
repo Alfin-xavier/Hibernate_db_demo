@@ -28,24 +28,22 @@ public class Employee
     @Column(name = "salary")
     private String salary;
     
-    @Column(name = "p_name")
-    private String p_name;
+    @Column(name = "p_id")
+    private int p_id;
 
     public Employee()
     {
     	
     }
     
-	public Employee(int emp_id, String emp_name, String e_mail, String phone, String salary,String p_name) 
+	public Employee(String emp_name, String e_mail, String phone, String salary,int p_id) 
 	{
-		this.emp_id = emp_id;
 		this.emp_name = emp_name;
 		this.e_mail = e_mail;
 		this.phone = phone;
 		this.salary = salary;
-		this.p_name = p_name;
+		this.p_id = p_id;
 		
-		System.out.println("Record Added Successfully!!");
 	}
 
 	public int getEmp_id() 
@@ -98,13 +96,13 @@ public class Employee
 		this.salary = salary;
 	}
 	
-	public String getP_name() 
+	public int getP_id() 
 	{
-		return p_name;
+		return p_id;
 	}
 
-	public void setP_name(String p_name) 
+	public void setP_id(int p_id) 
 	{
-		this.p_name = p_name;
+		this.p_id = p_id;
 	}
 }

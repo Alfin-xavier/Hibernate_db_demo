@@ -21,16 +21,14 @@ public class UpdatedRecord
 			{
 				session.beginTransaction();
 				
-				int id = 1181;
+				int id = 1;
 				Employee emp = session.get(Employee.class, id);
 				
 				System.out.println("** Before Update **");
 
-				System.out.println("Employee Id: " + emp.getEmp_id() + "\n" + "Employee Name: " + emp.getEmp_name() + "\n"
-						+ "Employee Project: " + emp.getP_name() + "\n");
+				System.out.println("Employee Id: " + emp.getEmp_id() + "\n" + "Employee Name: " + emp.getEmp_name() + "\n");
 				
-				emp.setEmp_name("merlin Jency");
-				emp.setP_name("Wk");
+				emp.setEmp_name("Alfin");
 				
 				 session.update(emp);
 				 System.out.println("Recorde Updated Successfully!!\n");
@@ -39,8 +37,7 @@ public class UpdatedRecord
 				
 				 System.out.println("** After Update **");
 
-					System.out.println("Employee Id: " + emp.getEmp_id() + "\n" + "Employee Name: " + emp.getEmp_name() + "\n"
-							+ "Employee Project: " + emp.getP_name() + "\n");
+					System.out.println("Employee Id: " + emp.getEmp_id() + "\n" + "Employee Name: " + emp.getEmp_name() + "\n");
 				
 			}
 			catch(SessionException e){
